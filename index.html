@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La P'tite Crêperie — Goûte-Moi</title>
+<meta name="description" content="Des crêpes et galettes préparées avec passion à Brazzaville. Commandez en ligne sur La P'tite Crêperie — Goûte-Moi.">
+<meta property="og:title" content="La P'tite Crêperie — Goûte-Moi">
+<meta property="og:description" content="Des crêpes et galettes préparées avec passion à Brazzaville. Commandez en ligne.">
+<meta property="og:image" content="images/logo.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <div class="nav-logo">
+    <img src="images/logo.jpg" alt="La P'tite Crêperie" />
+  </div>
+  <ul class="nav-links">
+    <li><a href="#accueil">Accueil</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="accueil">
+  <div class="hero-slides">
+    <div class="hero-slide slide-1 active"></div>
+    <div class="hero-slide slide-2"></div>
+    <div class="hero-slide slide-3"></div>
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <span class="status-badge" id="status-badge">
+      <span class="status-dot"></span>
+      <span id="status-text">Vérification...</span>
+    </span>
+    <img src="images/logo.jpg" class="hero-logo" alt="La P'tite Crêperie" />
+    <h1 class="hero-bienvenue">Bienvenue chez<br><em>La P'tite Crêperie</em></h1>
+    <p class="hero-slogan">— Goûte-Moi —</p>
+    <div class="status-badge" id="status-badge">
+      <span class="status-dot"></span>
+    </div>
+    <p class="hero-sub">Des crêpes et galettes préparées avec passion amour et générosité!.</p>
+    <div class="hero-btns">
+      <a href="#menu" class="btn-primary">Voir le menu</a>
+      <button type="button" id="hero-order-btn" class="btn-outline">Commander</button>
+    </div>
+  </div>
+</section>
+
+<!-- BIENVENUE -->
+<section class="welcome" id="bienvenue">
+  <div class="fade-up">
+    <p class="section-eyebrow">Notre histoire</p>
+    <h2 class="section-title">Le goût du fait<br>avec amour</h2>
+    <p class="section-sub">
+      La P'tite Crêperie, c'est un endroit pensé pour vous faire plaisir à chaque bouchée.
+      Crêpes sucrées ou galettes salées, préparées avec des ingrédients frais et une bonne humeur contagieuse.
+    </p>
+  </div>
+  <div class="welcome-cards fade-up">
+    <div class="welcome-card">
+      <span class="welcome-card-icon">🥞</span>
+      <h3>Crêpes sucrées</h3>
+      <p>Chocolat, caramel, fruits — une douceur pour chaque envie</p>
+    </div>
+    <div class="welcome-card">
+      <span class="welcome-card-icon">🫓</span>
+      <h3>Galettes sucrées</h3>
+      <p>Généreuses et gourmandes, à partager ou dévorer seul</p>
+    </div>
+    <div class="welcome-card">
+      <span class="welcome-card-icon">🍹</span>
+      <h3>Boissons fraîches</h3>
+      <p>Jus et sodas pour compléter votre pause gourmande</p>
+    </div>
+    <div class="welcome-card">
+      <span class="welcome-card-icon">📦</span>
+      <h3>Commande en ligne</h3>
+      <p>Commandez directement sur le site, simple et rapide</p>
+    </div>
+  </div>
+</section>
+
+<!-- MENU -->
+<section class="menu" id="menu">
+  <div class="menu-header fade-up">
+    <p class="section-eyebrow">Ce qu'on prépare</p>
+    <h2 class="section-title">Notre menu</h2>
+    <p class="section-sub">Simple et généreux.</p>
+  </div>
+  <div class="menu-grid">
+
+    <div class="menu-card fade-up">
+      <div class="menu-card-img" style="background-image:url('images/pot-de-crepe.jpg');">
+        <span class="menu-badge">⭐ Signature</span>
+      </div>
+      <div class="menu-card-body">
+        <h3>Le Pot de Crêpe</h3>
+        <p>Crêpes découpées en lanières, servies dans un pot et nappées de chocolat. Notre spécialité incontournable.</p>
+        <div class="menu-price">5 000 FCFA</div>
+        <button class="btn-add-cart" data-name="Le Pot de Crêpe" data-price="5000">+ Ajouter au panier</button>
+      </div>
+    </div>
+
+    <div class="menu-card fade-up">
+      <div class="menu-card-img" style="background-image:url('images/barquette.jpg');">
+        <span class="menu-badge">🔥 Populaire</span>
+      </div>
+      <div class="menu-card-body">
+        <h3>Barquette de Crêpe</h3>
+        <p>Une barquette généreuse de crêpe fraîche, sucrée ou garnie selon vos envies. Parfaite pour une pause rapide.</p>
+        <div class="menu-price">2 000 FCFA</div>
+        <button class="btn-add-cart" data-name="Barquette de Crêpe" data-price="2000">+ Ajouter au panier</button>
+      </div>
+    </div>
+
+    <div class="menu-card fade-up">
+      <div class="menu-card-img" style="background-image:url('images/galette.jpg');">
+        <span class="menu-badge">🍫 Au choix</span>
+      </div>
+      <div class="menu-card-body">
+        <h3>Crêpe Chocolatée ou Nature</h3>
+        <p>Une crêpe simple et gourmande, nappée de chocolat ou nature selon votre envie.</p>
+        <div class="menu-price">1 000 FCFA</div>
+        <button class="btn-add-cart" data-name="Crêpe Chocolatée ou Nature" data-price="1000">+ Ajouter au panier</button>
+      </div>
+    </div>
+
+    <div class="menu-card fade-up">
+      <div class="menu-card-img" style="background-image:url('https://images.unsplash.com/photo-1527960471264-932f39eb5846?w=600&q=80&auto=format&fit=crop');">
+        <span class="menu-badge">🥤 Boissons</span>
+      </div>
+      <div class="menu-card-body">
+        <h3>Boissons fraîches</h3>
+        <p>Jus de fruits et sodas pour accompagner vos crêpes et vous rafraîchir.</p>
+        <div class="menu-price">À partir de 500 FCFA</div>
+        <button class="btn-add-cart" data-name="Boisson fraîche" data-price="500">+ Ajouter au panier</button>
+      </div>
+    </div>
+
+    <div class="menu-card fade-up">
+      <div class="menu-card-img" style="background-image:url('images/crepe-nature.jpg');">
+        <span class="menu-badge">🫓 galette Sucrées</span>
+      </div>
+      <div class="menu-card-body">
+        <h3>Galette sucrées</h3>
+        <p>Une galette dorée et croustillante, garnie selon votre choix. Généreuse et savoureuse.</p>
+        <div class="menu-price">2 500 FCFA</div>
+        <button class="btn-add-cart" data-name="Galette" data-price="2500">+ Ajouter au panier</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- GALERIE -->
+<section class="gallery" id="galerie">
+  <div class="gallery-header fade-up">
+    <h2 class="section-title">Nos créations</h2>
+    <p class="section-eyebrow">En images</p>
+    <p class="section-sub">Un aperçu de ce qui vous attend.</p>
+  </div>
+  <div class="gallery-grid">
+    <div class="gallery-item fade-up" style="background-image:url('images/pot-de-crepe.jpg');"></div>
+    <div class="gallery-item fade-up" style="background-image:url('images/galette.jpg');"></div>
+    <div class="gallery-item fade-up" style="background-image:url('images/crepe-nature.jpg');"></div>
+    <div class="gallery-item fade-up" style="background-image:url('images/barquette.jpg');"></div>
+  </div>
+</section>
+
+<!-- STRIP -->
+<div class="strip">
+  <div class="strip-bg"></div>
+  <div class="strip-content">
+    <blockquote>« Chaque crêpe est préparée<br>avec <span>amour et générosité</span> »</blockquote>
+    <div class="strip-rating">
+      <p class="rating-prompt" id="rating-prompt">Vous avez goûté ? Donnez-nous votre avis</p>
+      <div class="stars-input" id="strip-stars">
+        <span data-val="1">★</span><span data-val="2">★</span><span data-val="3">★</span><span data-val="4">★</span><span data-val="5">★</span>
+      </div>
+      <p class="rating-thanks" id="rating-thanks">Merci pour votre avis ! 🙏</p>
+    </div>
+  </div>
+</div>
+
+<!-- INFOS -->
+<section class="infos" id="infos">
+  <div class="fade-up">
+    <p class="section-eyebrow">Pratique</p>
+    <h2 class="section-title">Infos pratiques</h2>
+    <div class="info-block">
+      <h3>🕐 Nos horaires</h3>
+      <div class="horaire-row"><span class="day">Lundi – Vendredi</span><span class="time">10h – 18h</span></div>
+      <div class="horaire-row"><span class="day">Samedi</span><span class="time">10h – 18h</span></div>
+      <div class="horaire-row"><span class="day">Dimanche</span><span class="time">10h – 18h</span></div>
+    </div>
+    <div class="info-block">
+      <h3>💳 Paiement accepté</h3>
+      <div class="horaire-row"><span class="day">💵 Espèces</span><span class="time">✅</span></div>
+      <div class="horaire-row"><span class="day">📱 Paiement mobile</span><span class="time">✅</span></div>
+    </div>
+  </div>
+  <div class="fade-up" id="contact">
+    <p class="section-eyebrow">Nous contacter</p>
+    <h2 class="section-title">On est là<br>pour vous</h2>
+    <div class="contact-item">
+      <div class="contact-icon">📞</div>
+      <div>
+        <div class="contact-label">Téléphone</div>
+        <div class="contact-val">+242 06 707 84 94</div>
+      </div>
+    </div>
+    <div class="contact-item">
+      <div class="contact-icon">✉️</div>
+      <div>
+        <div class="contact-label">Email</div>
+        <div class="contact-val">lapetitecreperiebz@gmail.com</div>
+      </div>
+    </div>
+    <div class="contact-item">
+      <div class="contact-icon">📍</div>
+      <div>
+        <div class="contact-label">Ville</div>
+        <div class="contact-val">Brazzaville, République du Congo</div>
+      </div>
+    </div>
+    <a href="tel:+242067078494" class="btn-primary btn-call">📞 Appeler</a>
+  </div>
+</section>
+
+<!-- PANIER FLOTTANT -->
+<button class="cart-float" id="cart-float-btn">
+  🛒
+  <span class="cart-badge" id="cart-badge" style="display:none">0</span>
+</button>
+
+<!-- RETOUR EN HAUT -->
+<button class="scroll-top-btn" id="scroll-top-btn" aria-label="Retour en haut">
+  ↑
+</button>
+
+<!-- MODAL PANIER -->
+<div class="cart-overlay" id="cart-overlay">
+  <div class="cart-modal">
+    <button class="cart-close-x" id="cart-close-x">✕</button>
+
+    <div id="cart-view">
+      <h2>🛒 Votre panier</h2>
+      <div id="cart-items"></div>
+      <div class="cart-total-row" id="cart-total-row" style="display:none">
+        <span>Total</span>
+        <span id="cart-total">0 FCFA</span>
+      </div>
+      <div class="cart-actions" id="cart-view-actions" style="display:none">
+        <button class="btn-cart-action btn-cart-close" id="cart-continue">Continuer mes achats</button>
+        <button class="btn-cart-action btn-cart-confirm" id="cart-goto-form">Commander</button>
+      </div>
+    </div>
+
+    <form id="order-form" class="cart-form">
+      <h2 style="margin-bottom:4px">Vos coordonnées</h2>
+      <p style="font-size:13px;color:var(--fumee);margin-bottom:10px">Pour finaliser votre commande</p>
+
+      <label>Nom complet *</label>
+      <input type="text" name="Nom" required placeholder="Votre nom" />
+
+      <label>Téléphone *</label>
+      <input type="tel" name="Téléphone" id="order-phone" required placeholder="+242 06 000 0000" />
+
+      <label>Mode de réception *</label>
+      <select name="Mode" id="order-mode" required>
+        <option value="">Choisir...</option>
+        <option value="À emporter / Retrait">À emporter / Retrait</option>
+        <option value="Livraison">Livraison</option>
+      </select>
+
+      <div id="address-field" style="display:none">
+        <label>Adresse de livraison *</label>
+        <textarea name="Adresse" placeholder="Quartier, repère, ville..."></textarea>
+      </div>
+
+      <label>Remarques (optionnel)</label>
+      <textarea name="Remarques" placeholder="Allergies, précisions sur la commande..."></textarea>
+
+      <label>Mode de paiement *</label>
+      <select name="Paiement" id="order-payment" required>
+        <option value="">Choisir...</option>
+        <option value="Espèces">💵 Espèces</option>
+        <option value="Paiement mobile">📱 Paiement mobile</option>
+      </select>
+
+      <!-- Champs cachés supprimés car la commande est envoyée via WhatsApp -->
+      <input type="hidden" name="_subject" value="🥞 Nouvelle commande — La P'tite Crêperie" />
+
+      <div class="payment-note">
+        💵 <strong>Paiement à la livraison ou au retrait</strong> — aucun paiement en ligne requis.
+        <br>📲 La commande sera envoyée par WhatsApp au restaurant.
+      </div>
+
+      <div class="cart-actions">
+        <button type="button" class="btn-cart-action btn-cart-close" id="order-back">← Retour</button>
+        <button type="submit" class="btn-cart-action btn-cart-confirm" id="order-submit">Commander via WhatsApp</button>
+      </div>
+    </form>
+
+    <div class="cart-success" id="cart-success">
+      <span class="icon">🎉</span>
+      <h3>Commande envoyée !</h3>
+      <p class="order-number-display">N° de commande : <strong id="success-order-number">—</strong></p>
+      <p>Merci ! Nous avons bien reçu votre commande.<br>Nous vous contactons très vite pour confirmer.</p>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p class="footer-name">La P'tite Crêperie</p>
+  <p class="footer-info">Brazzaville, République du Congo</p>
+  <p class="footer-info">📞 +242 06 707 84 94 &nbsp;|&nbsp; ✉️ lapetitecreperiebz@gmail.com</p>
+  <button type="button" class="btn-share" id="btn-share">📤 Partager le lien</button>
+  <div class="footer-sep"></div>
+  <p class="footer-copy">© 2025 La P'tite Crêperie — Tous droits réservés</p>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
