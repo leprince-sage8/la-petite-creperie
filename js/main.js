@@ -282,12 +282,7 @@ if (cartGotoFormBtn) {
 }
 
 // Hero "Commander" button: open the cart modal
-const heroOrderBtn = document.getElementById('hero-order-btn');
-if (heroOrderBtn && cartFloatBtn) {
-  heroOrderBtn.addEventListener('click', () => {
-    cartFloatBtn.click();
-  });
-}
+// heroOrderBtn removed from markup — no handler needed
 
 const orderBackBtn = document.getElementById('order-back');
 if (orderBackBtn) {
@@ -313,26 +308,7 @@ if (orderMode) {
   });
 }
 
-/* ═══════════════════════════════════════════
-   COMPTEUR DE COMMANDES (numéro séquentiel)
-   ═══════════════════════════════════════════ */
-async function getNextOrderNumber() {
-  try {
-    let current = 0;
-    try {
-      const existing = await window.storage.get('order-counter', true);
-      current = parseInt(existing.value, 10) || 0;
-    } catch (err) {
-      current = 0; // la clé n'existe pas encore
-    }
-    current += 1;
-    await window.storage.set('order-counter', String(current), true);
-    return 'LPC-' + String(current).padStart(4, '0');
-  } catch (err) {
-    // Solution de secours si le stockage est indisponible
-    return 'LPC-' + Date.now().toString().slice(-5);
-  }
-}
+/* Order numbering removed — simplified workflow without order IDs */
 
 /* ═══════════════════════════════════════════
    SOUMISSION DE LA COMMANDE
@@ -440,10 +416,7 @@ if (orderForm) {
     submitBtn.textContent = 'Envoi...';
     submitBtn.disabled = true;
 
-    const orderNumber = await getNextOrderNumber();
-
     const whatsappText = `Nouvelle commande — La P'tite Crêperie\n` +
-      `N° de commande : ${orderNumber}\n` +
       `Nom : ${name}\n` +
       `Téléphone : ${phone}\n` +
       `Mode : ${mode}\n` +
@@ -463,7 +436,6 @@ if (orderForm) {
 
     orderForm.classList.remove('active');
     cartSuccess.classList.add('active');
-    document.getElementById('success-order-number').textContent = orderNumber;
 
     cart = [];
     updateCartUI();
