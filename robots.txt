@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://la-petite-creperie.vercel.app/sitemap.xml
+Host: https://la-petite-creperie.vercel.app
