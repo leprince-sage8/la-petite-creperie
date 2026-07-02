@@ -2,9 +2,7 @@
    LA P'TITE CRÊPERIE — SERVICE WORKER (PWA)
    Cache les fichiers pour fonctionner hors ligne
    ═══════════════════════════════════════════ */
-
-const CACHE_NAME = 'laptitecreperie-v1';
-
+const CACHE_NAME = 'laptitecreperie-v2';
 const FILES_TO_CACHE = [
   '/',
   '/index.html',
@@ -14,10 +12,6 @@ const FILES_TO_CACHE = [
   '/images/favicon.png',
   '/images/icon-192.png',
   '/images/icon-512.png',
-  '/images/pot-de-crepe.jpg',
-  '/images/barquette.jpg',
-  '/images/crepe-nature.jpg',
-  '/images/galette.jpg',
   'https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500&display=swap'
 ];
 
@@ -45,18 +39,25 @@ self.addEventListener('activate', (event) => {
   self.clients.claim();
 });
 
-/* --- Interception des requêtes : cache en priorité, réseau en secours --- */
+/* --- Interception des requêtes --- */
 self.addEventListener('fetch', (event) => {
-  // On ne tente pas de cacher les requêtes POST (commandes WhatsApp, etc.)
   if (event.request.method !== 'GET') return;
 
+  // Pour la page HTML (navigation) : toujours essayer le réseau EN PREMIER
+  if (event.request.mode === 'navigate') {
+    event.respondWith(
+      fetch(event.request).catch(() => caches.match('/index.html'))
+    );
+    return;
+  }
+
+  // Pour le reste (images, css, js) : cache en priorité, réseau en secours
   event.respondWith(
     caches.match(event.request).then((cachedResponse) => {
       if (cachedResponse) {
         return cachedResponse;
       }
       return fetch(event.request).then((networkResponse) => {
-        // On met en cache les nouvelles ressources locales
         if (networkResponse && networkResponse.status === 200 && event.request.url.startsWith(self.location.origin)) {
           const responseClone = networkResponse.clone();
           caches.open(CACHE_NAME).then((cache) => {
